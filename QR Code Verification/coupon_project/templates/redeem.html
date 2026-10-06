@@ -1,0 +1,40 @@
+<input
+    type="text"
+    id="token"
+    placeholder="请扫描二维码"
+    autofocus
+>
+
+<p id="result"></p>
+
+<script>
+
+async function redeem() {
+    const token = document.getElementById("token").value;
+
+    const response = await fetch("/api/redeem", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            token: token,
+            device_id: 1,
+            device_key: "TEST-DEVICE-KEY-001"
+        })
+    });
+
+    const data = await response.json();
+
+    document.getElementById("result").innerText = data.msg;
+    document.getElementById("token").value = "";
+    document.getElementById("token").focus();
+}
+
+document.getElementById("token").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        redeem();
+    }
+});
+
+</script>

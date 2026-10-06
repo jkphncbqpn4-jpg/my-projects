@@ -1,0 +1,1 @@
+<view>学生注册</view><input placeholder="请输入姓名" value="{{a}}" bindinput="{{b}}"></input><button bindtap="{{c}}">注册</button>

@@ -1,0 +1,27 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTextStyle": "学生注册"
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "学生信息"
+			}
+		},
+		{
+			"path": "pages/coupons/coupons",
+			"style": {
+				"navigationBarTitleText": "我的优惠券"
+			}
+		}
+	]
+}
